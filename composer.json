@@ -1,39 +1,35 @@
 {
-  "name": "connect-ease/deploy-bundel",
-  "type": "symfony-bundle",
-  "description": "Un bundle Symfony qui installe un script de déploiement.",
-  "authors": [
-      {
-          "name": "François Xavier Darragon",
-          "email": "fxd15130@gmail.com"
-      }
-  ],
-  "autoload": {
-      "psr-4": {
-          "DeployBundel\\": "src/"
-      }
-  },
-  "require": {
-      "php": ">=8.0",
-      "symfony/config": "^7.2",
-      "symfony/http-kernel": "^7.2",
-      "symfony/dependency-injection": "^7.2"
-  },
-  "extra": {
-      "branch-alias": {
-          "dev-main": "1.0-dev"
-      }
-  },
-  "scripts": {
-      "post-install-cmd": [
-          "echo 'Exécution du script post-install-cmd dans le projet...'", 
-          "flush();",
-          "DeployBundel\\Installer::install"
-      ],
-      "post-update-cmd": [
-          "echo 'Exécution du script post-update-cmd dans le projet...'",
-          "flush();",
-          "DeployBundel\\Installer::install"
-      ]
+    "name": "connect-ease/deploy-bundel",
+    "type": "symfony-bundle",
+    "description": "Un bundle Symfony qui installe un script de déploiement.",
+    "authors": [
+        {
+            "name": "François Xavier Darragon",
+            "email": "fxd15130@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "DeployBundel\\": "src/"
+        }
+    },
+    "require": {
+        "php": ">=8.0",
+        "symfony/config": "^7.2",
+        "symfony/http-kernel": "^7.2",
+        "symfony/dependency-injection": "^7.2"
+    },
+    "extra": {
+        "symfony": {
+            "allow-contrib": false
+        }
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "DeployBundel\\Installer::install"
+        ],
+        "post-update-cmd": [
+            "DeployBundel\\Installer::install"
+        ]
+    }
   }
-}
