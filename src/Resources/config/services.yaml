@@ -1,0 +1,7 @@
+# src/DeployBundel/Resources/config/services.yaml
+services:
+    # Déclaration du service pour exécuter le script
+    DeployBundel\Installer:
+        # Ce service va appeler la méthode install() au moment du lancement
+        public: true  # Assure-toi que ton service soit public pour pouvoir l'utiliser
+        arguments: []
