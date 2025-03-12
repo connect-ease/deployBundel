@@ -6,7 +6,6 @@ class Installer
 {
     public static function install()
     {
-        echo "Installation en cours...\n";
         
         $projectRoot = dirname(__DIR__, 4);
         $targetFile = $projectRoot . '/deploy.sh';

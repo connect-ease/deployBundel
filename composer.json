@@ -26,9 +26,11 @@
   },
   "scripts": {
       "post-install-cmd": [
+          "echo 'Exécution du script post-install-cmd dans le projet...'", 
           "DeployBundel\\Installer::install"
       ],
       "post-update-cmd": [
+          "echo 'Exécution du script post-update-cmd dans le projet...'",
           "DeployBundel\\Installer::install"
       ]
   }
