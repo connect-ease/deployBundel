@@ -26,10 +26,10 @@
     },
     "scripts": {
         "post-install-cmd": [
-            "DeployBundel\\Installer::install"
+            "@php -r \"require 'vendor/autoload.php'; DeployBundel\\Installer::install();\""
         ],
         "post-update-cmd": [
-            "DeployBundel\\Installer::install"
+            "@php -r \"require 'vendor/autoload.php'; DeployBundel\\Installer::install();\""
         ]
     }
   }
