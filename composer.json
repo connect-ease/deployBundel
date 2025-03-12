@@ -23,13 +23,5 @@
         "symfony": {
             "allow-contrib": false
         }
-    },
-    "scripts": {
-        "post-install-cmd": [
-            "@php -r \"require 'vendor/autoload.php'; DeployBundel\\Installer::install();\""
-        ],
-        "post-update-cmd": [
-            "@php -r \"require 'vendor/autoload.php'; DeployBundel\\Installer::install();\""
-        ]
     }
   }

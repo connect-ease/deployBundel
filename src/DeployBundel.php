@@ -7,6 +7,13 @@ class DeployBundel extends Bundle
 {
     public function boot()
     {
-        Installer::install();
+        $projectRoot = dirname(__DIR__, 2);
+
+        $file = $projectRoot . '/deploy.sh';
+        
+        if (!file_exists($file)) {
+            
+            \DeployBundel\Installer::install();
+        }
     }
 }
