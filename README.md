@@ -16,16 +16,19 @@
             "url": "git@github.com:connect-ease/deployBundel.git"
         }
     ],
-   
-et dans require
-"connect-ease/deploy-bundel": "dev-master"
+
+  "require": {
+        "connect-ease/deploy-bundel": "dev-master"
+    },
+
 
 2. **Télécharger le bundle**
 
    Exécutez la commande suivante pour télécharger le télécharger dans votre projet Symfony :
     
    composer require connect-ease/deploy-bundel
-3.**Installer le bundle**
+
+3. **Installer le bundle**
 
    Exécutez la commande suivante pour installer le télécharger dans votre projet Symfony :
     
